@@ -29,11 +29,18 @@ $(document).ready(function(){
   $('.b01').css('background-color', theButtonColor);
  })
 
+ $('#player2').on('click', function(event){
+  event.stopPropagation();
+  var theButtonColor = $(event.target).css('background-color');
+  $('.b02').css('background-color', theButtonColor);
+ })
 // $('.row1').click(function(){
 //    $('.b01').css(“color”, “red”);
 });
 
-});
+// for(var 0 = i;)
+
+
 
 
 
