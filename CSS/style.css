@@ -8,3 +8,76 @@ h1 {
   height: 1000px;
 }
 
+.b01 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+  background-color: black;
+}
+
+.b02 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+}
+
+.b03 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+}
+
+.b04 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+}
+
+.b05 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+}
+
+.b06 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 150px;
+}
+
+.wholeBoard {
+  margin: auto;
+  background-color: yellow;
+}
+
+.row1 {
+  margin: auto;
+}
+
+.page {
+  background-color: blue;
+}
