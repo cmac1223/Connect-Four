@@ -8,6 +8,14 @@ h1 {
   height: 1000px;
 }
 
+#player1 {
+  background-color: blue;
+}
+
+#player2 {
+  background-color: red;
+}
+
 .b01 {
   width: 100px;
   height: 100px;
@@ -16,7 +24,6 @@ h1 {
   font-size: 12px;
   line-height: 1.42;
   border-radius: 150px;
-  background-color: black;
 }
 
 .b02 {
