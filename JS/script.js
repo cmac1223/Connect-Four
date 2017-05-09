@@ -26,14 +26,17 @@ $(document).ready(function(){
  $('#player1').on('click', function(event){
   event.stopPropagation();
   var theButtonColor = $(event.target).css('background-color');
-  $('.b01').css('background-color', theButtonColor);
+  $('.button1').css('background-color', theButtonColor);
  })
 
  $('#player2').on('click', function(event){
   event.stopPropagation();
   var theButtonColor = $(event.target).css('background-color');
-  $('.b02').css('background-color', theButtonColor);
+  $('.button2').css('background-color', theButtonColor);
  })
+
+
+
 // $('.row1').click(function(){
 //    $('.b01').css(“color”, “red”);
 });
