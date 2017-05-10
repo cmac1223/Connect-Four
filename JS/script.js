@@ -34,12 +34,10 @@ $(document).ready(function(){
   var theButtonColor = $(event.target).css('background-color');
   $('.button2').css('background-color', theButtonColor);
  })
-
-
-
-// $('.row1').click(function(){
-//    $('.b01').css(“color”, “red”);
 });
+
+
+//var arry = [  ]
 
 // for(var 0 = i;)
 

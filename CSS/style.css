@@ -10,12 +10,14 @@ h1 {
 
 #player1 {
   background-color: blue;
-  text-align: right;
+
 }
 
 #player2 {
   background-color: red;
-
+  display: flex;
+  float: right;
+  align-items: center;
 }
 
 .button1 {
