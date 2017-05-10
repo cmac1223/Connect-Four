@@ -8,16 +8,14 @@ h1 {
   height: 1000px;
 }
 
-#player1 {
+.player1 {
   background-color: blue;
 
 }
 
-#player2 {
+.player2 {
   background-color: red;
-  display: flex;
-  float: right;
-  align-items: center;
+  
 }
 
 .button1 {

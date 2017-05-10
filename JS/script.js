@@ -1,45 +1,89 @@
 $(document).ready(function(){
 
-//  $('#b01').on('click', function(){
-//    alert('Test');
-//  })
-//  $('#b02').on('click', function(){
-//    alert('Test');
-//  })
-//  $('#b03').on('click', function(){
-//    alert('Test');
-//  })
-//  $('#b04').on('click', function(){
-//    alert('Test');
-//  })
-//  $('#b05').on('click', function(){
-//    alert('Test');
-//  })
-//  $('#b06').on('click', function(){
-//    alert('Test');
-//  })
+    var currentPlayer = 1;
 
-// $('.btn').on('click', function(){
-//   alert('YES!');
-// })
 
- $('#player1').on('click', function(event){
-  event.stopPropagation();
-  var theButtonColor = $(event.target).css('background-color');
-  $('.button1').css('background-color', theButtonColor);
- })
 
- $('#player2').on('click', function(event){
-  event.stopPropagation();
-  var theButtonColor = $(event.target).css('background-color');
-  $('.button2').css('background-color', theButtonColor);
- })
+
+
+ $('.wholeBoard').on('click', function(event){
+    $(event.target).addClass(`player${currentPlayer}` );
+    if(currentPlayer === 1){
+        currentPlayer = 2
+    } else if (currentPlayer === 2){
+        currentPlayer = 1
+    }
+    
 });
 
 
-//var arry = [  ]
+});
 
-// for(var 0 = i;)
+
+    // $('.button2').on('click', function(event){
+    //     $(event.target).addClass('player1' );
+    // })
+
+    // $('.button3').on('click', function(event){
+    //     $(event.target).addClass('player1' );
+    // })
+
+    // $('.button4').on('click', function(event){
+    //     $(event.target).addClass('player1' );
+    // })
+
+    // $('.button5').on('click', function(event){
+    //     $(event.target).addClass('player1' );
+    // })
+
+    // $('.button6').on('click', function(event){
+    //     $(event.target).addClass('player1' );
+    // })
+    
+
+    // });
+
+
+// var gameInfo = {
+//             firstPlayerName: "Player1",
+//             firstPlayerColor: "Black",
+//             secondPlayerName: "Player2",
+//             secondPlayerColor: "Red",
+//             firstPlayerToStart: "Black",
+//             currentPlayer: "Waiting on ",
+//             winner: 4,
+//         };
+
+// var gameBoard = [[x,x,x,x,x,x,x],
+//                  [x,x,x,x,x,x,x],
+//                  [x,x,x,x,x,x,x],
+//                  [x,x,x,x,x,x,x],
+//                  [x,x,x,x,x,x,x],
+//                  [x,x,x,x,x,x,x],
+//                 ];        
+
+//   $('#player1').css('background-color', theButtonColor);
+//  })
+
+//  $('#player2').on('click', function(event){
+//   event.stopPropagation();
+//   var theButtonColor = $(event.target).css('background-color');
+//   $('.button2').css('background-color', theButtonColor);
+ 
+// });
+ 
+//  var moveTracker = [];
+//  var rowX = [];
+//  var columnY = ["b01",];
+
+// $('x').on('click', function(){
+    
+//   ]
+//})
+
+//var x = ["button1"]
+
+//var y = ["b01"]
 
 
 
