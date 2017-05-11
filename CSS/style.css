@@ -18,7 +18,7 @@ h1 {
   
 }
 
-.button1 {
+.button {
   width: 100px;
   height: 100px;
   text-align: center;
@@ -28,55 +28,6 @@ h1 {
   border-radius: 150px;
 }
 
-.button2 {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.42;
-  border-radius: 150px;
-}
-
-.button3 {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.42;
-  border-radius: 150px;
-}
-
-.button4 {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.42;
-  border-radius: 150px;
-}
-
-.button5 {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.42;
-  border-radius: 150px;
-}
-
-.button6 {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.42;
-  border-radius: 150px;
-}
 
 .wholeBoard {
   margin: auto;

@@ -1,23 +1,29 @@
 $(document).ready(function(){
-    if ($.gameBoard) return;
+    
 
     var currentPlayer = 1;
 
-
-    
-    //
-    $('.wholeBoard button').click(function(e) {
-        var y = $('.wholeBoard tr').index($(this).closest('tr'));
-        var x = $(this).closest('tr').find('td').index($(this).closest('td'));
-        console.log(x);
-        console.log(y);
+    $('.cell42 ').on('click', function(event){
+        var clickedCellId = event.target.id;
+        console.log('callback fired');
+        var $cells = $('.cell42');
+        console.log($cells);
+        // for (var i = 0; i < $cells.length; i++) {
+        //     console.log('loop hit');
+            // var cell42 = $cells[i];
+            console.log(clickedCellId);
+            var x = parseInt(clickedCellId[0]);
+            console.log(x);
+            var y = parseInt(clickedCellId[2]);
+            console.log(y);
+            // gameBoard[x][y].player = cell42.getAttribute(['currentPlayer'])
+            gameBoard[x][y].player = currentPlayer;
+            console.log(gameBoard[x][y]);
+        
+        // }
     });
 
-
-
-
-
- $('.wholeBoard').on('click', function(event){
+    $('.wholeBoard').on('click', function(event){
     $(event.target).addClass(`player${currentPlayer}` );
     if(currentPlayer === 1){
         currentPlayer = 2
@@ -28,13 +34,15 @@ $(document).ready(function(){
 });
 
 var gameBoard = [
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0]
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}],
+    [{},{},{},{},{},{},{}]
 ];
+
 
 function dropPiece(x, currentPlayer) {
     for(var i = 5; i >= 0; i--) {
@@ -45,41 +53,65 @@ function dropPiece(x, currentPlayer) {
     }
 }
 
-dropPiece()
-});     
+
+
+
+// function initialize() {
+//     $('.cell42 ').on('click', function(){
+//         console.log('callback fired');
+//         var $cells = $('.cell42');
+//         console.log($cells);
+//         for (var i = 0; i < $cells.length; i++) {
+//             console.log('loop hit');
+//             var cell42 = $cells[i];
+//             console.log(cell42);
+//             var x = parseInt(cell42.getAttribute(['id'])[0]);
+//             console.log(x);
+//             var y = parseInt(cell42.getAttribute(['id'])[2]);
+//             console.log(y);
+//             gameBoard[x][y].player = cell42.getAttribute(['currentPlayer'])
+        
+//         }
+// });
+
+});
+    
+    
+    // $('.wholeBoard button').click(function(e) {
+    //     var y = $('.wholeBoard tr').index($(this).closest('tr'));
+    //     var x = $(this).closest('tr').find('td').index($(this).closest('td'));
+        
+        
+    // });
+
+
+
+
+
+ 
+    
+
+
+//     var $cells = $('cell42')
+//     for (var i = 0; i < $cells.length; i++) {
+//         var cell42 = $cells[i];
+//         cell42.attr[i]
+//         var x = parseInt(cell42.attr['id'][0]);
+//         console.log(x);
+//         var y = parseInt(cell42.attr['id'][2]);
+//         console.log(y);
+//         gameBoard[x][y].player = cell42.attr['currentPlayer']
+    
+// }
+// });
+
+
+
+  
   
 
 
 
-
-// var column1 = 
-
-
-// });
-
-
-    // $('.button2').on('click', function(event){
-    //     $(event.target).addClass('player1' );
-    // })
-
-    // $('.button3').on('click', function(event){
-    //     $(event.target).addClass('player1' );
-    // })
-
-    // $('.button4').on('click', function(event){
-    //     $(event.target).addClass('player1' );
-    // })
-
-    // $('.button5').on('click', function(event){
-    //     $(event.target).addClass('player1' );
-    // })
-
-    // $('.button6').on('click', function(event){
-    //     $(event.target).addClass('player1' );
-    // })
-    
-
-    // });
 
 
 // var gameInfo = {
