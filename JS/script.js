@@ -3,6 +3,16 @@ $(document).ready(function(){
     var currentPlayer = 1;
 
 
+    
+    //
+    $('.wholeBoard button').click(function(e) {
+        var y = $('.wholeBoard tr').index($(this).closest('tr'));
+        var x = $(this).closest('tr').find('td').index($(this).closest('td'));
+        console.log(x);
+        console.log(y);
+    });
+
+
 
 
 
@@ -16,8 +26,35 @@ $(document).ready(function(){
     
 });
 
+var gameBoard = [
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0]
+];
 
-});
+function dropPiece(x, currentPlayer) {
+    for(var i = 5; i >= 0; i--) {
+        if(!gameBoard[i][x]){
+            gameBoard[i][x] = currentPlayer;
+            
+        }   
+    }
+}
+
+dropPiece()
+});     
+  
+
+
+
+
+// var column1 = 
+
+
+// });
 
 
     // $('.button2').on('click', function(event){
