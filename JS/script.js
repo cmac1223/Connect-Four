@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    if ($.gameBoard) return;
 
     var currentPlayer = 1;
 
