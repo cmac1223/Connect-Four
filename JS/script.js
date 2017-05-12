@@ -47,7 +47,7 @@ const gameBoard = [
             var y = parseInt(clickedCellId[2]);
             console.log(y);
 
-
+            // starting point row0
             for(var i = 0; i < 6; i++) {
                 console.log(gameBoard[x][i].player);
                 if(!gameBoard[x][i].player){
@@ -73,8 +73,52 @@ const gameBoard = [
 
                 }   
             }
+
+
+
+
+            for (var i = 0; i < gameBoard.length; i++) {
+                console.log('check row: ' + i);
+                for (var j = 0; j < 7; j++) {
+                    if (gameBoard[i][j].player ){
+                        
+                     
+                  
+                            if (j <= 3 && gameBoard[i][j].player === gameBoard[i][j].player
+                            && gameBoard[i][j].player === gameBoard[i][j+1].player 
+                            && gameBoard[i][j].player === gameBoard[i][j+2].player 
+                            && gameBoard[i][j].player === gameBoard[i][j+3].player){
+                        
+                            console.log('game over');
+                        
+                        }
+                    }
+            }
+    };                
      
     });
+
+
+    // //fourInARowColumn
+    // for (var i = 0; i < gameBoard.length; i++) {
+    //     console.log('check row: i')
+	// 		for (var j = 0; j < 7; j++) {
+    //             console.log('check column: j '+ gameBoard[i][j].player);
+    //             console.log('check column: j '+ gameBoard[i][j+1].player);
+    //             console.log('check column: j '+ gameBoard[i][j+2].player);
+    //             console.log('check column: j '+ gameBoard[i][j+3].player);
+	// 			// if (j <= 3 
+    //             //     && gameBoard[i][j].player === gameBoard[i][j+1].player 
+    //             //     && gameBoard[i][j].player === gameBoard[i][j+2].player 
+    //             //     && gameBoard[i][j].player === gameBoard[i][j+3].player){
+                   
+	// 			// 	alert("Game Over"); 
+					
+					
+	// 			// 	//return;
+    //             // }
+    //         }
+    // };                
     
 });
 
