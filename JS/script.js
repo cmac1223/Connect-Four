@@ -2,19 +2,14 @@ $(document).ready(function(){
      
 
     var currentPlayer = 1;
-    // var player1 = {
-    //         class: 'player1',
-    //         background: 'blue'
-    //     };
-        
-    // var player2 = {
-    //     class: 'player2',
-    //     background: 'red'
-    //     };    
 
+    //target id want x & y values
+    //create a click function when each button is clicked
     $('.cell42 ').on('click', function(event){
+        //assign event.target.id to var clickedCellId
         var clickedCellId = event.target.id;
         console.log('callback fired');
+        //assign each button to var cells
         var $cells = $('.cell42');
         console.log($cells);
         
@@ -28,10 +23,26 @@ $(document).ready(function(){
                 if(gameBoard[x][i].player === null){
                     gameBoard[x][i] = currentPlayer;
                     //jquery to change class to currentplayer color class switch
+                    // console.log(currentPlayer)
+                   $(event.target).addClass(`player${currentPlayer}`);
+                  
+                  
+
+                   // $(`#${x}-${y}`)[0]
+                   // .addClass(`${currentPlayer.class}`)
+                
+                
+                
+                //     if(currentPlayer === 1){
+                //     currentPlayer = 2;
+                // } else if (currentPlayer === 2){
+                //     currentPlayer = 1;
+                // }
+                    
                     
 
 
-                     break;
+                //      break;
 
                 }   
             }
@@ -43,7 +54,7 @@ $(document).ready(function(){
         
     });
 
-    //function switchPlayer() {
+    
         $('.wholeBoard').on('click', function(event){
             $(event.target).addClass(`player${currentPlayer}`);
             if(currentPlayer === 1){
@@ -52,7 +63,7 @@ $(document).ready(function(){
                 currentPlayer = 1;
             }
         });
-    //}
+    
 
 
     
