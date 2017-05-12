@@ -9,20 +9,16 @@ const gameBoard = [
     [{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{}]
 ];
-    
-    
     const Player1 = {
         class: 'player1',
         background: 'blue'
     };
 
-
-
     const Player2 = {
         class: 'player2',
         background: 'red'
     }
-
+    //gameBoard loop
     for (var i = 0; i < gameBoard.length; i++) {
         for (var j = 0; j < 7; j++) {
             gameBoard[i][j].player = null;
@@ -42,8 +38,10 @@ const gameBoard = [
         console.log($cells);
         
             console.log(clickedCellId);
+            // x value
             var x = parseInt(clickedCellId[0]);
             console.log(x);
+            // y value
             var y = parseInt(clickedCellId[2]);
             console.log(y);
 
@@ -56,13 +54,15 @@ const gameBoard = [
                     console.log(gameBoard);
                     gameBoard[x][i].player = currentPlayer;
                     //jquery to change class to currentplayer color class switch
-                    // console.log(currentPlayer)
+                    
                     var $cell = $(`#${x}-${i}`);
                     $cell.addClass(currentPlayer.class);
                    $(`#${x}-${i}`).addClass(currentPlayer.class);
                    
-                   console.log('Class: ' + currentPlayer.class);
-                  
+                // alternate between players
+                // alternating colors 
+                //player1 Blue
+                //player2 Red 
                 if(currentPlayer === Player1){
                     currentPlayer = Player2;
                 } else if (currentPlayer === Player2){
@@ -74,22 +74,23 @@ const gameBoard = [
                 }   
             }
 
-
-
-
+            // vertical win 4 in a row
+            // looping through the X values
             for (var i = 0; i < gameBoard.length; i++) {
                 console.log('check row: ' + i);
+                // looping through the Y values
                 for (var j = 0; j < 7; j++) {
+                    //since gameBoard is undefined starting off
                     if (gameBoard[i][j].player ){
                         
-                     
-                  
+                            // then cycle through ths if statement checking conditions
                             if (j <= 3 && gameBoard[i][j].player === gameBoard[i][j].player
                             && gameBoard[i][j].player === gameBoard[i][j+1].player 
                             && gameBoard[i][j].player === gameBoard[i][j+2].player 
                             && gameBoard[i][j].player === gameBoard[i][j+3].player){
-                        
+                            //once condition is met alert user
                             console.log('game over');
+                            alert("Game Over");
                         
                         }
                     }
@@ -99,26 +100,7 @@ const gameBoard = [
     });
 
 
-    // //fourInARowColumn
-    // for (var i = 0; i < gameBoard.length; i++) {
-    //     console.log('check row: i')
-	// 		for (var j = 0; j < 7; j++) {
-    //             console.log('check column: j '+ gameBoard[i][j].player);
-    //             console.log('check column: j '+ gameBoard[i][j+1].player);
-    //             console.log('check column: j '+ gameBoard[i][j+2].player);
-    //             console.log('check column: j '+ gameBoard[i][j+3].player);
-	// 			// if (j <= 3 
-    //             //     && gameBoard[i][j].player === gameBoard[i][j+1].player 
-    //             //     && gameBoard[i][j].player === gameBoard[i][j+2].player 
-    //             //     && gameBoard[i][j].player === gameBoard[i][j+3].player){
-                   
-	// 			// 	alert("Game Over"); 
-					
-					
-	// 			// 	//return;
-    //             // }
-    //         }
-    // };                
+    
     
 });
 
