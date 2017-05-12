@@ -1,11 +1,27 @@
 $(document).ready(function(){
      
 
-    var currentPlayer = 1;
+    
+    
+    var player1 = {
+        class: 'player1',
+        background: 'blue'
+    };
+
+
+
+    var player2 = {
+        class: 'player2',
+        background: 'red'
+    }
+
+
+    var currentPlayer = player1;
 
     //target id want x & y values
     //create a click function when each button is clicked
     $('.cell42 ').on('click', function(event){
+        console.log(currentPlayer);
         //assign event.target.id to var clickedCellId
         var clickedCellId = event.target.id;
         console.log('callback fired');
@@ -19,56 +35,30 @@ $(document).ready(function(){
             var y = parseInt(clickedCellId[2]);
             console.log(y);
 
+
             for(var i = 6; i >= 0; i--) {
-                if(gameBoard[x][i].player === null){
+                console.log(gameBoard[x][i].player);
+                if(!gameBoard[x][i].player){
+                    
                     gameBoard[x][i] = currentPlayer;
                     //jquery to change class to currentplayer color class switch
                     // console.log(currentPlayer)
-                   $(event.target).addClass(`player${currentPlayer}`);
+                   $(event.target).addClass(currentPlayer.class);
+                   
+                   console.log('Class: ' + currentPlayer.class);
                   
-                  
-
-                   // $(`#${x}-${y}`)[0]
-                   // .addClass(`${currentPlayer.class}`)
-                
-                
-                
-                //     if(currentPlayer === 1){
-                //     currentPlayer = 2;
-                // } else if (currentPlayer === 2){
-                //     currentPlayer = 1;
-                // }
-                    
-                    
-
-
-                //      break;
+                if(currentPlayer === player1){
+                    currentPlayer = player2;
+                } else if (currentPlayer === player2){
+                    currentPlayer = player1;
+                }
+        
+                     break;
 
                 }   
             }
-
-
-            gameBoard[x][y].player = currentPlayer;
-            console.log(gameBoard[x][y]);
-            
-        
+     
     });
-
-    
-        $('.wholeBoard').on('click', function(event){
-            $(event.target).addClass(`player${currentPlayer}`);
-            if(currentPlayer === 1){
-                currentPlayer = 2;
-            } else if (currentPlayer === 2){
-                currentPlayer = 1;
-            }
-        });
-    
-
-
-    
-
-    
     
 });
 
