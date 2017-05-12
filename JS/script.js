@@ -1,35 +1,63 @@
 $(document).ready(function(){
-    
+     
 
     var currentPlayer = 1;
+    // var player1 = {
+    //         class: 'player1',
+    //         background: 'blue'
+    //     };
+        
+    // var player2 = {
+    //     class: 'player2',
+    //     background: 'red'
+    //     };    
 
     $('.cell42 ').on('click', function(event){
         var clickedCellId = event.target.id;
         console.log('callback fired');
         var $cells = $('.cell42');
         console.log($cells);
-        // for (var i = 0; i < $cells.length; i++) {
-        //     console.log('loop hit');
-            // var cell42 = $cells[i];
+        
             console.log(clickedCellId);
             var x = parseInt(clickedCellId[0]);
             console.log(x);
             var y = parseInt(clickedCellId[2]);
             console.log(y);
-            // gameBoard[x][y].player = cell42.getAttribute(['currentPlayer'])
+
+            for(var i = 6; i >= 0; i--) {
+                if(gameBoard[x][i].player === null){
+                    gameBoard[x][i] = currentPlayer;
+                    //jquery to change class to currentplayer color class switch
+                    
+
+
+                     break;
+
+                }   
+            }
+
+
             gameBoard[x][y].player = currentPlayer;
             console.log(gameBoard[x][y]);
+            
         
-        // }
     });
 
-    $('.wholeBoard').on('click', function(event){
-    $(event.target).addClass(`player${currentPlayer}` );
-    if(currentPlayer === 1){
-        currentPlayer = 2
-    } else if (currentPlayer === 2){
-        currentPlayer = 1
-    }
+    //function switchPlayer() {
+        $('.wholeBoard').on('click', function(event){
+            $(event.target).addClass(`player${currentPlayer}`);
+            if(currentPlayer === 1){
+                currentPlayer = 2;
+            } else if (currentPlayer === 2){
+                currentPlayer = 1;
+            }
+        });
+    //}
+
+
+    
+
+    
     
 });
 
@@ -44,14 +72,7 @@ var gameBoard = [
 ];
 
 
-function dropPiece(x, currentPlayer) {
-    for(var i = 5; i >= 0; i--) {
-        if(!gameBoard[i][x]){
-            gameBoard[i][x] = currentPlayer;
-            
-        }   
-    }
-}
+
 
 
 
@@ -74,15 +95,9 @@ function dropPiece(x, currentPlayer) {
 //         }
 // });
 
-});
+
     
     
-    // $('.wholeBoard button').click(function(e) {
-    //     var y = $('.wholeBoard tr').index($(this).closest('tr'));
-    //     var x = $(this).closest('tr').find('td').index($(this).closest('td'));
-        
-        
-    // });
 
 
 
