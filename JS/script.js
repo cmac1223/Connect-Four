@@ -8,15 +8,17 @@ const gameBoard = [
     [{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{}],
     [{},{},{},{},{},{},{}]
-];
+    ];
     const Player1 = {
         class: 'player1',
         background: 'blue'
+
     };
 
     const Player2 = {
         class: 'player2',
-        background: 'red'
+        background: 'red',
+
     }
     //gameBoard loop
     for (var i = 0; i < gameBoard.length; i++) {
@@ -74,33 +76,78 @@ const gameBoard = [
                 }   
             }
 
-            // vertical win 4 in a row
+            // vertical win 4 in a column
             // looping through the X values
             for (var i = 0; i < gameBoard.length; i++) {
                 console.log('check row: ' + i);
                 // looping through the Y values
-                for (var j = 0; j < 7; j++) {
+                for (var j = 0; j < 5; j++) {
                     //since gameBoard is undefined starting off
                     if (gameBoard[i][j].player ){
-                        
-                            // then cycle through ths if statement checking conditions
-                            if (j <= 3 && gameBoard[i][j].player === gameBoard[i][j].player
-                            && gameBoard[i][j].player === gameBoard[i][j+1].player 
-                            && gameBoard[i][j].player === gameBoard[i][j+2].player 
-                            && gameBoard[i][j].player === gameBoard[i][j+3].player){
+                        // then cycle through ths if statement checking conditions
+                        if (j <= 3 && gameBoard[i][j].player === gameBoard[i][j].player
+                        && gameBoard[i][j].player === gameBoard[i][j+1].player 
+                        && gameBoard[i][j].player === gameBoard[i][j+2].player 
+                        && gameBoard[i][j].player === gameBoard[i][j+3].player){
                             //once condition is met alert user
-                            console.log('game over');
+                            console.log('game Over');
                             alert("Game Over");
                         
                         }
                     }
+                }    
+                    
             }
-    };                
+            //horiz win 4 in a row
+            for (var i = 0; i < gameBoard.length; i++) {
+                for ( var j = 0; j < gameBoard.length; j++) {
+                    if (gameBoard[i][j].player) {
+                        if (i <= 3 && gameBoard[i][j].player === gameBoard[i][j].player 
+                        && gameBoard[i][j].player === gameBoard[i+1][j].player 
+                        && gameBoard[i][j].player === gameBoard[i+2][j].player 
+                        && gameBoard[i][j].player === gameBoard[i+3][j].player) {
+                            console.log('game Over')
+                            alert('Game Over')
+                        }
+                    }
+                }
+            }
+            //diagonal win 4 in a line(right)
+            for (var i = 0; i < gameBoard.length; i++) {
+                for ( var j = 0; j < gameBoard.length; j++) {
+                    if (gameBoard[i][j].player) {
+                        if (i <= 3 && j <= 2 && gameBoard[i][j].player === gameBoard[i][j].player 
+                        && gameBoard[i][j].player === gameBoard[i+1][j+1].player 
+                        && gameBoard[i][j].player === gameBoard[i+2][j+2].player 
+                        && gameBoard[i][j].player === gameBoard[i+3][j+3].player) {
+                            console.log('game Over')
+                            alert('Game Over')
+                        }
+                    }
+                }
+            }
+            // diagonal win 4 in a line(left)
+            for (var i = 0; i < gameBoard.length; i++) {
+                for ( var j = 0; j < gameBoard.length; j++) {
+                    if (gameBoard[i][j].player) {
+                        if (i >= 3 && j >= 2 && gameBoard[i][j].player === gameBoard[i][j].player 
+                        && gameBoard[i][j].player === gameBoard[i-1][j+1].player 
+                        && gameBoard[i][j].player === gameBoard[i-2][j+2].player 
+                        && gameBoard[i][j].player === gameBoard[i-3][j+3].player) {
+                            console.log('game Over')
+                            alert('Game Over')
+                        }
+                    }
+                }
+            }
+
+
+
+                   
      
     });
 
 
-    
     
 });
 
