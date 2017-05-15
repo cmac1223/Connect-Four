@@ -18,7 +18,9 @@ Css
 github:
 https://github.com/cmac1223/Connect-Four
 
+
 trello
+https://trello.com/b/o1UtnkO4/connect…
 
 
 ![alt text][img]http://i.imgur.com/hYeS2Eo.png[/img]"Logo Title Text 1")
