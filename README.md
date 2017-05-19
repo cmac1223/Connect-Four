@@ -26,4 +26,4 @@ https://trello.com/b/o1UtnkO4/connect…
 ![alt text][img]http://i.imgur.com/hYeS2Eo.png[/img]"Logo Title Text 1")
 
 connect four
-https://www.bitballoon.com/sites/biologist-chimpanzee-20720
+http://waiter-dolphin-74734.bitballoon.com/
